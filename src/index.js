@@ -7,14 +7,14 @@ const app = express();
 const port = 3000;
 
 // static
-        app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // http log
 // app.use(morgan('combined'));
 
 // view template
 app.engine('hbs', engine({ extname: '.hbs' }));
-            app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 
 // routes
